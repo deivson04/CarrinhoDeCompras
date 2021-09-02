@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreatePedidoProdutosTable extends Migration
+class Pedidoprodutos extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,7 @@ class CreatePedidoProdutosTable extends Migration
      */
     public function up()
     {
-        /**
-     * Run the migrations.
-     *
-     * @return void
-     */
-    
-            Schema::create('pedido_produtos', function (Blueprint $table) {
+        Schema::create('pedido_produtos', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('pedido_id')->unsigned(); // unsigned: somente inteiros positivos
             $table->integer('produto_id')->unsigned();  // unsigned: somente inteiros positivos
@@ -43,7 +37,4 @@ class CreatePedidoProdutosTable extends Migration
     {
         Schema::dropIfExists('pedido_produtos');
     }
-  }
-
-    
-
+}
