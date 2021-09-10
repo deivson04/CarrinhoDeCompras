@@ -12,9 +12,10 @@ class PedidoProduto extends Model
         'status',
         'valor'
     ];
-    
+     // Aqui esta fazendo a ligaca
     public function produto()
     {
         return $this->belongsTo('App\Produto', 'produto_id', 'id');
+    
     }
 }

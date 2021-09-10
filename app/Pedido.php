@@ -10,7 +10,7 @@ class Pedido extends Model
         'user_id',
         'status'
     ];
-
+    // Aqui esta fazendo o relacionameto entre as tabelas   
     public function pedido_produtos()
     {
         return $this->hasMany('App\PedidoProduto')
